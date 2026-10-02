@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none'">
+  <title>Finish connecting · PFM Reporting Extract</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="name" href="index.html">PFM Reporting Extract</a>
+      <nav aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms of use</a>
+      <a href="reconnect.html">Reconnect</a>
+      </nav>
+    </header>
+    <main>
+
+      <h1>Finish connecting</h1>
+      <div id="has-code" hidden>
+        <p class="lede">Copy this address and paste it into the terminal where you ran <code>qbo_extract auth</code>.</p>
+        <label for="full-url" class="meta">Address to paste</label>
+        <textarea id="full-url" readonly spellcheck="false"></textarea>
+        <p><button type="button" id="copy">Copy address</button> <span id="copied" class="meta" role="status" hidden>Copied</span></p>
+        <div class="card ok">
+          <p style="margin:0">This page only displays the code. It doesn't send it anywhere. The page's security policy blocks it from making any network requests. The code expires within a few minutes and works only once, together with the app's secret.</p>
+        </div>
+      </div>
+      <div id="has-error" class="card warn" hidden>
+        <h2>Intuit didn't complete the connection</h2>
+        <p id="error-text"></p>
+        <p style="margin:0">Run <code>qbo_extract auth</code> again to get a fresh sign-in link.</p>
+      </div>
+      <div id="no-code" hidden>
+        <p class="lede">This page is used only during sign-in to QuickBooks Online. There's nothing to do here right now.</p>
+      </div>
+      <noscript><p>Copy the full address from your browser's address bar and paste it into the terminal.</p></noscript>
+
+    </main>
+    <footer>
+      PFM Reporting Extract is a private tool operated by Performance Freight Management for its own use. It is not made or endorsed by Intuit.
+      QuickBooks and Intuit are trademarks of Intuit Inc.
+    </footer>
+  </div>
+  <script src="callback.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy policy · PFM Reporting Extract</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="name" href="index.html">PFM Reporting Extract</a>
+      <nav aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms of use</a>
+      <a href="reconnect.html">Reconnect</a>
+      </nav>
+    </header>
+    <main>
+
+      <h1>Privacy policy</h1>
+      <p class="meta">Effective September 28, 2026</p>
+      <p>PFM Reporting Extract (the "app") is a private software tool operated by Performance Freight Management ("PFM", "we"). It copies PFM's own accounting data from QuickBooks Online into PFM's internal reporting. It is not offered to the public and connects only to PFM's QuickBooks Online company.</p>
+
+      <h2>What the app reads</h2>
+      <p>With read-only access granted through Intuit's QuickBooks Online Accounting API, the app reads the following from PFM's QuickBooks Online company:</p>
+      <ul>
+        <li><strong>Lists:</strong> customers, vendors, chart of accounts and payment terms. This includes names, contact email and phone number, billing city, province and country, balances and terms.</li>
+        <li><strong>Transactions:</strong> invoices, bills, credit memos, customer payments and bill payments. This includes dates, amounts, balances, currencies, document and reference numbers, and memo text.</li>
+        <li><strong>Reports:</strong> profit and loss, balance sheet, and accounts receivable and payable aging.</li>
+      </ul>
+      <p>The app does not create, change or delete anything in QuickBooks Online. It does not read payment card numbers, payroll or employee records, or QuickBooks passwords.</p>
+
+      <h2>Why</h2>
+      <p>The app exists only to produce PFM's internal management reports, such as receivables and collections, payables and cash, and monthly financial statements. The data isn't used for any other purpose.</p>
+
+      <h2>Where the data is stored</h2>
+      <ul>
+        <li>The extracted data is saved as files in PFM's Microsoft 365 environment (SharePoint or OneDrive) and read by PFM's Power BI reports.</li>
+        <li>The files are also written on the computer that runs the app before they sync to Microsoft 365.</li>
+        <li>The authorization tokens Intuit issues, and the app's client credentials, are stored on that computer in files readable only by the user account that runs the app. They are not kept in source code or shared storage.</li>
+      </ul>
+
+      <h2>Who can see it</h2>
+      <p>The data is available only to PFM staff and to contractors PFM has authorized to work on its reporting. Access in Microsoft 365 follows PFM's own permissions. We do not sell, rent or share this data with third parties, and we don't use it for advertising.</p>
+      <p>The only outside services involved are Intuit, the source of the data, and Microsoft, which stores and reports it under PFM's own Microsoft 365 agreement.</p>
+
+      <h2>How long we keep it</h2>
+      <p>The main extract files are replaced on every run. Daily snapshot files, used to show how balances change over time, are kept for as long as PFM needs them for reporting and are deleted under PFM's normal record-keeping practices.</p>
+      <p>The app's log files record run times, row counts, totals and error messages. They rotate automatically.</p>
+
+      <h2>Security</h2>
+      <ul>
+        <li>All communication with Intuit uses HTTPS.</li>
+        <li>Authorization uses Intuit's OAuth 2.0 with the read-only accounting scope, and the sign-in request is checked against forgery.</li>
+        <li>The app never sees or stores QuickBooks usernames or passwords.</li>
+      </ul>
+
+      <h2>Disconnecting</h2>
+      <p>A QuickBooks Online administrator at PFM can disconnect the app at any time from the apps area of QuickBooks Online, or ask the app's operator to revoke access. Once it's disconnected, the app can't read any further data. Files already extracted stay in PFM's systems until PFM deletes them.</p>
+
+      <h2>Your information</h2>
+      <p>Some records in PFM's books name people at PFM's customers and suppliers, such as a contact's name, email or phone number. PFM handles that information under applicable Canadian privacy law and uses it only for the reporting described here. To ask about, correct or remove your information, contact <a href="mailto:report@pfmfreight.com">report@pfmfreight.com</a>.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new effective date.</p>
+
+    </main>
+    <footer>
+      PFM Reporting Extract is a private tool operated by Performance Freight Management for its own use. It is not made or endorsed by Intuit.
+      QuickBooks and Intuit are trademarks of Intuit Inc.
+    </footer>
+  </div>
+</body>
+</html>
