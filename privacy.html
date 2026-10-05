@@ -29,7 +29,7 @@
       <p>With read-only access granted through Intuit's QuickBooks Online Accounting API, the app reads the following from PFM's QuickBooks Online company:</p>
       <ul>
         <li><strong>Lists:</strong> customers, vendors, chart of accounts and payment terms. This includes names, contact email and phone number, billing city, province and country, balances and terms.</li>
-        <li><strong>Transactions:</strong> invoices, bills, credit memos, customer payments and bill payments. This includes dates, amounts, balances, currencies, document and reference numbers, and memo text.</li>
+        <li><strong>Transactions:</strong> invoices, bills, credit memos, vendor credits, customer payments and bill payments. This includes dates, amounts, balances, currencies, document and reference numbers, and memo text.</li>
         <li><strong>Reports:</strong> profit and loss, balance sheet, and accounts receivable and payable aging.</li>
       </ul>
       <p>The app does not create, change or delete anything in QuickBooks Online. It does not read payment card numbers, payroll or employee records, or QuickBooks passwords.</p>
@@ -41,7 +41,7 @@
       <ul>
         <li>The extracted data is saved as files in PFM's Microsoft 365 environment (SharePoint or OneDrive) and read by PFM's Power BI reports.</li>
         <li>The files are also written on the computer that runs the app before they sync to Microsoft 365.</li>
-        <li>The authorization tokens Intuit issues, and the app's client credentials, are stored on that computer in files readable only by the user account that runs the app. They are not kept in source code or shared storage.</li>
+        <li>The authorization tokens Intuit issues, including the company ID, are stored on that computer encrypted with AES-256. The encryption key is kept in a separate file. The tokens, the key and the app's client credentials are all in files readable only by the user account that runs the app, and none of them are kept in source code or shared storage.</li>
       </ul>
 
       <h2>Who can see it</h2>
@@ -50,7 +50,7 @@
 
       <h2>How long we keep it</h2>
       <p>The main extract files are replaced on every run. Daily snapshot files, used to show how balances change over time, are kept for as long as PFM needs them for reporting and are deleted under PFM's normal record-keeping practices.</p>
-      <p>The app's log files record run times, row counts, totals and error messages. They rotate automatically.</p>
+      <p>The app's log files record run times, record counts and error messages, never QuickBooks figures, names or credentials. They rotate automatically.</p>
 
       <h2>Security</h2>
       <ul>
